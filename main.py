@@ -150,7 +150,7 @@ for query in queries:
 driver.quit()
 
 print(f'程序执行时间:{time.time() - start_time}')
-
+input("Press Enter to exit")
 if __name__ == '__main__':
     pass
 
