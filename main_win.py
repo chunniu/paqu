@@ -45,7 +45,7 @@ for query in queries:
     last_ytd_app_height = ytd_app.size.get('height')
 
     # 滚动到页面底部 翻页次数
-    while False:
+    while True:
         print(f'执行翻页:{page}')
         time.sleep(time_sleep)
         driver.execute_script("window.scrollTo(0,document.getElementsByTagName('ytd-app')[0].scrollHeight)")
