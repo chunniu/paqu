@@ -25,7 +25,7 @@ for query in queries:
 
     try_times_end = 10  # 重试次数
     try_times = 1  # 重试次数开始
-    page = 0  # 翻页数量
+    page = 10  # 翻页数量
     time_sleep = 3  # 休眠时间-秒
 
     # 下滑滑动次数，page=10 代表 翻页 10.
