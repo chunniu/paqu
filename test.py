@@ -13,3 +13,5 @@ driver.get('http://www.baidu.com')
 
 # 关闭浏览器
 driver.quit()
+
+input("Press Enter to exit")
