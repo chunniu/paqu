@@ -1,6 +1,7 @@
 import time
 import xlwt
 import xlrd
+import datetime
 from selenium import webdriver
 
 from selenium.webdriver.common.proxy import Proxy
@@ -135,6 +136,7 @@ for query in queries:
     sheet.write(0, 2, '链接')
     sheet.write(0, 3, '内容')
     sheet.write(0, 4, '异常')
+    sheet.write(0, 5, query)
     for i in range(len(content_list)):
         sheet.write(i + 1, 0, content_list[i]['index'])
         sheet.write(i + 1, 1, content_list[i]['state'])
@@ -142,7 +144,7 @@ for query in queries:
         sheet.write(i + 1, 3, content_list[i]['find_text'])
         sheet.write(i + 1, 4, content_list[i]['except_text'])
 
-    workbook.save(f'./{query}.{time.time()}.xls')
+    workbook.save(f'./{query}.{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}.xls')
     print('写入数据完成')
 
     time.sleep(1)
