@@ -144,7 +144,7 @@ for query in queries:
         sheet.write(i + 1, 3, content_list[i]['find_text'])
         sheet.write(i + 1, 4, content_list[i]['except_text'])
 
-    workbook.save(f'{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}.xls')
+    workbook.save(f'./output/{datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")}.xls')
     print('写入数据完成')
 
     time.sleep(1)
