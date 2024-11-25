@@ -11,6 +11,6 @@ sheet.write(0, 4, '异常')
 
 
 
-workbook.save(f'{datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")}.xls')
+workbook.save(f'./output/{datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")}.xls')
 
 input("Press Enter to exit")
