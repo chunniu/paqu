@@ -1,17 +1,16 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
+import datetime
+import xlwt
 
-# 创建 Service 对象
-ser = Service()
-ser.executable_path = f'C:\project\chrome-headless-shell-win64\chrome-headless-shell.exe'	# 指定 ChromeDriver 的路径
+workbook = xlwt.Workbook()
+sheet = workbook.add_sheet('sheet1')
+sheet.write(0, 0, '序号')
+sheet.write(0, 1, '状态')
+sheet.write(0, 2, '链接')
+sheet.write(0, 3, '内容')
+sheet.write(0, 4, '异常')
 
-# 初始化 WebDriver，使用之前创建 Service 对象
-driver = webdriver.Chrome(service=ser)
 
-# 打开网页
-driver.get('http://www.baidu.com')
 
-# 关闭浏览器
-driver.quit()
+workbook.save(f'{datetime.datetime.now().strftime("%Y-%m-%d_%H:%M:%S")}.xls')
 
 input("Press Enter to exit")
